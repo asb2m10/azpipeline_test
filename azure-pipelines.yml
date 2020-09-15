@@ -1,0 +1,24 @@
+trigger:
+- master
+
+pr:
+- master
+
+variables:
+  version: BETA
+
+jobs:
+- job: TestVar
+  pool:
+    vmImage: 'macos-10.14'
+
+  steps:
+  - checkout: self
+    fetchDepth: 1
+
+  - bash: |
+  	echo "Hello World"
+  	echo $(version) is the content
+    displayName: Make Projuce Output
+    
+
