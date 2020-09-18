@@ -4,9 +4,6 @@ trigger:
 pr:
 - master
 
-variables:
-  version: BETA
-
 jobs:
 - job: TestVar
   pool:
