@@ -19,6 +19,6 @@ jobs:
       echo "Uname -s output"
       uname -s
       echo "Hello World"
-  	  echo $(version) is the content
+      echo $(version) is the content
      
     displayName: Test Step
