@@ -14,7 +14,11 @@ jobs:
 
   steps:
   - bash: |
+      set -e
+      set -o xtrace
+      echo "Uname -s output"
+      uname -s
       echo "Hello World"
   	  echo $(version) is the content
-    displayName: Step Test
-
+     
+    displayName: Test Step
