@@ -10,15 +10,11 @@ variables:
 jobs:
 - job: TestVar
   pool:
-    vmImage: 'macos-10.14'
+    vmImage: 'ubuntu-16.04'
 
   steps:
-  - checkout: self
-    fetchDepth: 1
-
   - bash: |
-  	echo "Hello World"
-  	echo $(version) is the content
-    displayName: Make Projuce Output
-    
+      echo "Hello World"
+  	  echo $(version) is the content
+    displayName: Step Test
 
